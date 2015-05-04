@@ -43,4 +43,4 @@ Functions are methods that can be invoked from the resource.
 | ----  | -----------   | ----- | ------  | ----    | ----  | ------    | ----  | ---   | ----  |
 | Add Group | A function used to add the account to a group | Group | Group Membership |  |  |  |  |  |  |
 | Create API Key | A function used to create an API Key for the account | | API Key |  |  |  |  |  |  |
-| Is Member of Group | A function used to check if the account is associated with a group | boolean | String (name or href for the Group |  |  |  |  |  |  |
+| Is Member of Group | A function used to check if the account is associated with a group | String (name or href for the Group | boolean |  |  |  |  |  |  |
