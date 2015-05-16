@@ -22,7 +22,11 @@ will likely want to use the OauthRequestAuthenticator class.
 
 #### Methods
 
-TODO
+This section lists the methods that this class should have.
+
+| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
+| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
+| Authenticate | A method used to authenticate an HTTP Request object | HTTP Request Object| API Authentication Result |  |  |  |  |  |  |
 
 
 ### BasicRequestAuthenticator
@@ -32,7 +36,11 @@ This class should authenticate HTTP Basic Auth requests.
 
 #### Methods
 
-TODO
+This section lists the methods that this class should have.
+
+| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
+| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
+| Authenticate | A method used to authenticate an HTTP Request object | HTTP Request Object| API Authentication Result |  |  |  |  |  |  |
 
 
 ### OAuthRequestAuthenticator
@@ -50,6 +58,12 @@ types this authenticator should support.
 
 #### Methods
 
+This section lists the methods that this class should have.
+
+| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
+| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
+| Authenticate | A method used to authenticate an HTTP Request object | HTTP Request Object| API Authentication Result |  |  |  |  |  |  |
+
 
 ### OAuthBearerRequestAuthenticator
 
@@ -59,8 +73,23 @@ look for the bearer token in the HTTP request.
 
 #### Methods
 
+This section lists the methods that this class should have.
+
+| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
+| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
+| Authenticate | A method used to authenticate an HTTP Request object | HTTP Request Object| API Authentication Result |  |  |  |  |  |  |
+
 
 ### OAuthClientCredentialsRequestAuthenticator
 
 This class should authenticate OAuth2 client credentials grant type requests
 only.  It will handle authenticating a request based on API key credentials.
+
+
+#### Methods
+
+This section lists the methods that this class should have.
+
+| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
+| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
+| Authenticate | A method used to authenticate an HTTP Request object | HTTP Request Object| API Authentication Result |  |  |  |  |  |  |
