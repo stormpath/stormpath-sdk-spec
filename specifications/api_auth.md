@@ -1,46 +1,66 @@
-## API Auth
+# API Auth
 
-An Account is a unique identity within a Directory, with a unique username and/or email address. An account can log in to applications using either the email address or username associated with it. Accounts can represent people end-users, but they can also be used to represent services, machines, or any ‘entity’ that needs to login to a Stormpath-enabled application.
+This spec references how our Stormpath libraries handle API authentication.
 
-### Properties
+Stormpath provides ways to authenticate API requests using both HTTP Basic
+Authentication and OAuth2.
 
-Properties on a instance resource can be read or set.  There are a set of properties that are read-only that are set during Stormpath operations, like creation or modification.  
 
-| Name  | Description   | REST  | Java  | Python    | Node  | PHP   | Ruby  |
-| ----  | -----------   | ----  | ----  | ------    | ----  | ---   | ----  |
-| Created At | The created at time for the resource in ISO 8601 datetime format |  |  |  |  |  |  |
-| Email | The email for the account |  |  |  |  |  |  |
-| Full Name | The derived full name from the Given Name and Surname.  This is a read-only property |  |  |  |  |  |  |
-| Given Name | The given name (first name) of the account |  |  |  |  |  |  |
-| Href | The reference to the resource in Stormpath. This property is read-only |  |  |  |  |  |  |
-| Middle Name | The middle name of the account |  |  |  |  |  |  |
-| Modified At | The last modified time for tthe resource in ISO 8601 datetime format.  This is a read-only property |  |  |  |  |  |  |
-| Status | The status of the account.  The status of the account can be `ENABLED` `DISABLED` `UNVERIFIED` |  |  |  |  |  |  |
-| Surname | The surname (last name) of the account |  |  |  |  |  |  |
-| Username | The username of the account |  |  |  |  |  |  |
+## Authenticators
 
-### Links
+This section discusses the various authenticator classes that each SDK should
+provide.  These classes should be initialized with a Stormpath Application and
+accept an HTTP request object of some sort.
 
-Links represent properties on an instance resource that point to another resource.  These must be obtainable from the resource.
 
-| Name  | Description   | REST  | Java  | Python    | Node  | PHP   | Ruby  |
-| ----  | -----------   | ----  | ----  | ------    | ----  | ---   | ----  |
-| API Keys | An expandable link to the account's API Keys collection  |  |  |  |  |  |  |
-| Applications | An expandable link to the account's application collection.  This collection represents the applications the account is associated with through account store mappings  |  |  |  |  |  |  |
-| Custom Data | An expandable link to the account's customData  |  |  |  |  |  |  |
-| Directory | An exandable link to the directory that the account was created in  |  |  |  |  |  |  |
-| Email Verification Token | 
-| Group Memberships | An expandable link to the group memberships collection for the account  |  |  |  |  |  |  |
-| Groups | An expandable link to the groups for the account  |  |  |  |  |  |  |
-| Provider Data | An expandable link to the account's provider data  |  |  |  |  |  |  |
-| Tenant | An expandable link to the tenant that the account was created in  |  |  |  |  |  |  |
+### ApiRequestAuthenticator
 
-### Functions
+This class should authenticate both HTTP Basic Auth *and* OAuth2 requests.
+However, if you need more specific or customized OAuth2 request processing, you
+will likely want to use the OauthRequestAuthenticator class.
 
-Functions are methods that can be invoked from the resource. 
 
-| Name  | Description   | Input | Output  | REST    | Java  | Python    | Node  | PHP   | Ruby  |
-| ----  | -----------   | ----- | ------  | ----    | ----  | ------    | ----  | ---   | ----  |
-| Add Group | A function used to add the account to a group | Group | Group Membership |  |  |  |  |  |  |
-| Create API Key | A function used to create an API Key for the account | | API Key |  |  |  |  |  |  |
-| Is Member of Group | A function used to check if the account is associated with a group | String (name or href for the Group | boolean |  |  |  |  |  |  |
+#### Methods
+
+TODO
+
+
+### BasicRequestAuthenticator
+
+This class should authenticate HTTP Basic Auth requests.
+
+
+#### Methods
+
+TODO
+
+
+### OAuthRequestAuthenticator
+
+This class should authenticate OAuth2 requests.  It will *eventually* support
+authenticating all 4 OAuth2 grant types.
+
+Specifically, right now, this class will authenticate OAuth2 access tokens, as
+well as handle API key for access token exchanges using the OAuth2 client
+credentials grant type.
+
+**NOTE**: In the future we might need to accept options regarding which grant
+types this authenticator should support.
+
+
+#### Methods
+
+
+### OAuthBearerRequestAuthenticator
+
+This class should authenticate OAuth2 bearer token requests only.  It will only
+look for the bearer token in the HTTP request.
+
+
+#### Methods
+
+
+### OAuthClientCredentialsRequestAuthenticator
+
+This class should authenticate OAuth2 client credentials grant type requests
+only.  It will handle authenticating a request based on API key credentials.
