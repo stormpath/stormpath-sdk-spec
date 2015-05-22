@@ -3,8 +3,10 @@
     "apiKeyFile": "/path/to/file",
     "apiKeyId": "xxx",
     "apiKeySecret": "xxx",
-    "applicationName": "test",
-    "applicationHref": "https://...",
+  },
+  "application": {
+    "name": "test",
+    "href": "https://..."
   },
   "api": {
 
