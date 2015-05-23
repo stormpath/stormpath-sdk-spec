@@ -73,7 +73,7 @@
     },
     "idSite": {
       "enabled": false,  // if this is true, then when a visitor hits /login or /register, we auto redirect them to the id site
-      "uri": "/idsite"   // this is the authorized redirectUri that will create the session
+      "callbackUri": "https://mysite.com/idsite"   // this is the authorized redirectUri that will create the session
     }
   }
 }
