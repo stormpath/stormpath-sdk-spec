@@ -3,6 +3,7 @@
     "apiKeyFile": "/path/to/file",
     "apiKeyId": "xxx",
     "apiKeySecret": "xxx",
+    "baseUrl": "https://api.stormpath.com/v1"
   },
   "application": {
     "name": "test",
