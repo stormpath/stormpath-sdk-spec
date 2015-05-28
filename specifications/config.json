@@ -9,7 +9,22 @@
     "href": "https://..."
   },
   "api": {
-
+    "oauth2":{
+      "enabled": false,
+      "uri": "/oauth/token",
+      "password":{
+        "enabled": true,
+        "accessToken":{
+          "ttl": 3600
+        }
+      },
+      "client_credentials":{
+        "enabled": true,
+        "accessToken":{
+          "ttl": 3600
+        }
+      },
+    },
   },
   "web": {
     "admin": {
