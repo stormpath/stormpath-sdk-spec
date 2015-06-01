@@ -1,15 +1,35 @@
 {
   "client": {
-    "apiKeyFile": "/path/to/file",
-    "apiKeyId": "xxx",
-    "apiKeySecret": "xxx",
-    "baseUrl": "https://api.stormpath.com/v1"
+    "apiKey":{
+      "file":"",
+      "id":"",
+      "secret":""
+    },
+    "cacheManager":{
+      "defaultTtl": 300,
+      "defaultTti": 300,
+      "caches": {
+        "account": {
+          "ttl": 300,
+          "tti": 300
+        }
+      }
+    },
+    "baseUrl": "https://api.stormpath.com/v1",
+    "connectionTimeout": 30,
+    "authenticationScheme": "SAUTHC1", // or "BASIC"
+    "proxy":{
+      "port": "",
+      "host": "",
+      "username": "",
+      "password": ""
+    }
   },
   "application": {
     "name": "test",
     "href": "https://..."
   },
-  "api": {
+  "web": {
     "oauth2":{
       "enabled": false,
       "uri": "/oauth/token",
@@ -24,19 +44,14 @@
         "accessToken":{
           "ttl": 3600
         }
-      },
-    },
-  },
-  "web": {
-    "admin": {
-      "enabled": false,
-      "uri": "/admin"  // if you visit this URI and youre a stormpath admin in the admins directory, you get redirected to stormpath admin dashboard panel for the current application
+      }
     },
     "register": {
       "enabled": false,
       "uri": "/register",
       "nextUri": "/",
       "templatePath": "/path/to/template.jade",
+      "autoAuthorize": false,
       "fields": [
         {
           "name": "givenName",
@@ -57,12 +72,12 @@
           "type": "password"
         },
       ],
-      "verifyEmail": {
-        "autoLogin": true,
-        "uri": "/verify",
-        "nextUri": "/",
-        "templatePath": "/path/to/template.jade"
-      }
+    },
+    "verifyEmail": {
+      "autoLogin": true,
+      "uri": "/verify",
+      "nextUri": "/",
+      "templatePath": "/path/to/template.jade"
     },
     "login": {
       "enabled": false,
@@ -80,16 +95,20 @@
       "enabled": false,
       "uri": "/forgot",
       "templatePath": "/path/to/template.jade",
-      "change": {
-        "autoLogin": true,
-        "uri": "/change",
-        "templatePath": "/path/to/template.jade",
-        "nextUri": "/"
-      }
+    },
+    "changePassword": {
+      "enabled": false,
+      "autoLogin": true,
+      "uri": "/change",
+      "templatePath": "/path/to/template.jade",
+      "nextUri": "/"
     },
     "idSite": {
       "enabled": false,  // if this is true, then when a visitor hits /login or /register, we auto redirect them to the id site
-      "callbackUri": "https://mysite.com/idsite"   // this is the authorized redirectUri that will create the session
+      "uri": "/idSiteResult",
+      "loginUri": "",
+      "forgotUri": "/#/forgot",
+      "registerUri": "/#/register"
     }
   }
 }
