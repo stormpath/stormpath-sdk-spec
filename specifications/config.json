@@ -50,7 +50,6 @@
       "enabled": false,
       "uri": "/register",
       "nextUri": "/",
-      "templatePath": "/path/to/template.jade",
       "autoAuthorize": false,
       "fields": [
         {
@@ -83,8 +82,7 @@
       "enabled": false,
       "autoLogin": true,
       "uri": "/login",
-      "nextUri": "/",
-      "templatePath": "/path/to/template.jade",
+      "nextUri": "/"
     },
     "logout": {
       "enabled": false,
@@ -93,14 +91,12 @@
     },
     "forgotPassword": {
       "enabled": false,
-      "uri": "/forgot",
-      "templatePath": "/path/to/template.jade",
+      "uri": "/forgot"
     },
     "changePassword": {
       "enabled": false,
       "autoLogin": true,
       "uri": "/change",
-      "templatePath": "/path/to/template.jade",
       "nextUri": "/"
     },
     "idSite": {
