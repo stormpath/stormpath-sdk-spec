@@ -83,8 +83,7 @@
     "verifyEmail": {
       "autoLogin": true,
       "uri": "/verify",
-      "nextUri": "/",
-      "templatePath": "/path/to/template.jade"
+      "nextUri": "/"
     },
     "login": {
       "enabled": false,
