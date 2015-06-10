@@ -46,6 +46,14 @@
         }
       }
     },
+    "session":{
+      "ttl": 3600,
+      "tti": 900,
+      "httpOnly": true,
+      "secure": null,
+      "path": "/",
+      "domain": null
+    },
     "register": {
       "enabled": false,
       "uri": "/register",
