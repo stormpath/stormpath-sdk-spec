@@ -113,6 +113,10 @@
       "loginUri": "",
       "forgotUri": "/#/forgot",
       "registerUri": "/#/register"
+    },
+    "me": {
+      "enabled": false,
+      "uri": "/me"
     }
   }
 }
