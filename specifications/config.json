@@ -46,8 +46,8 @@
         }
       }
     },
-    "session":{
-      "cookieName": "access_token",
+    "tokenCookie":{
+      "name": "access_token",
       "ttl": 3600,
       "tti": 900,
       "httpOnly": true,
@@ -80,17 +80,20 @@
           "type": "password"
         },
       ],
+      "templateName": "register"
     },
     "verifyEmail": {
       "autoLogin": true,
       "uri": "/verify",
-      "nextUri": "/"
+      "nextUri": "/",
+      "templateName": "verify"
     },
     "login": {
       "enabled": false,
       "autoLogin": true,
       "uri": "/login",
-      "nextUri": "/"
+      "nextUri": "/",
+      "templateName": "login"
     },
     "logout": {
       "enabled": false,
@@ -99,13 +102,15 @@
     },
     "forgotPassword": {
       "enabled": false,
-      "uri": "/forgot"
+      "uri": "/forgot",
+      "templateName": "forgot-password"
     },
     "changePassword": {
       "enabled": false,
       "autoLogin": true,
       "uri": "/change",
-      "nextUri": "/"
+      "nextUri": "/",
+      "templateName": "change-password"
     },
     "idSite": {
       "enabled": false,  // if this is true, then when a visitor hits /login or /register, we auto redirect them to the id site
