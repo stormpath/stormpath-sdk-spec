@@ -47,6 +47,7 @@
       }
     },
     "session":{
+      "cookieName": "access_token",
       "ttl": 3600,
       "tti": 900,
       "httpOnly": true,
