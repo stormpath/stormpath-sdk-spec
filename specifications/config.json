@@ -46,7 +46,7 @@
         }
       }
     },
-    "tokenCookie":{
+    "accessTokenCookie":{
       "name": "access_token",
       "ttl": 3600,
       "tti": 900,
