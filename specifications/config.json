@@ -80,20 +80,20 @@
           "type": "password"
         },
       ],
-      "templateName": "register"
+      "view": "register"
     },
     "verifyEmail": {
       "autoLogin": true,
       "uri": "/verify",
       "nextUri": "/",
-      "templateName": "verify"
+      "view": "verify"
     },
     "login": {
       "enabled": false,
       "autoLogin": true,
       "uri": "/login",
       "nextUri": "/",
-      "templateName": "login"
+      "view": "login"
     },
     "logout": {
       "enabled": false,
@@ -103,14 +103,14 @@
     "forgotPassword": {
       "enabled": false,
       "uri": "/forgot",
-      "templateName": "forgot-password"
+      "view": "forgot-password"
     },
     "changePassword": {
       "enabled": false,
       "autoLogin": true,
       "uri": "/change",
       "nextUri": "/",
-      "templateName": "change-password"
+      "view": "change-password"
     },
     "idSite": {
       "enabled": false,  // if this is true, then when a visitor hits /login or /register, we auto redirect them to the id site
