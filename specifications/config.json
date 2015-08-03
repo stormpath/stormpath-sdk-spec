@@ -52,26 +52,15 @@
       "uri": "/register",
       "nextUri": "/",
       "autoAuthorize": false,
-      "fields": [
-        {
-          "name": "givenName",
-          "required": true
-        },
-        {
-          "name": "surname",
-          "required": true
-        },
-        {
-          "name": "email",
-          "required": true,
-          "type": "email"
-        },
-        {
-          "name": "password",
-          "required": true,
-          "type": "password"
-        },
-      ],
+      "fields": {
+        "givenName": { "required": true },
+        "middleName": { "required": false },
+        "surname": { "required": true },
+        "email": { "required": true, "type": "email" },
+        "password": { "required": true, "type": "password" },
+        "passwordConfirm": { "required": false, "type": "password" }
+      },
+      "fieldOrder": [ "givenName", "middleName", "surname", "email", "password", "passwordConfirm" ],
       "view": "register"
     },
     "verifyEmail": {
