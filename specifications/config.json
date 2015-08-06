@@ -64,7 +64,6 @@
       "view": "register"
     },
     "verifyEmail": {
-      "autoLogin": true,
       "uri": "/verify",
       "nextUri": "/",
       "view": "verify"
@@ -84,13 +83,15 @@
     "forgotPassword": {
       "enabled": false,
       "uri": "/forgot",
-      "view": "forgot-password"
+      "view": "forgot-password",
+      "nextUri": "/login?status=forgot"
     },
     "changePassword": {
       "enabled": false,
-      "autoLogin": true,
+      "autoLogin": false,
       "uri": "/change",
-      "nextUri": "/",
+      "nextUri": "/login?status=reset",
+      "errorUri": "/forgot?status=invalid_sptoken",
       "view": "change-password"
     },
     "idSite": {
