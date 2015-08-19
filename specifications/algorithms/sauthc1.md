@@ -1,6 +1,6 @@
 ### SAuthc1 Algorithm
 
-Stormpath also supports a more secure authentication scheme known as digest authentication. This approach computes a [cryptographic digest](http://en.wikipedia.org/wiki/Cryptographic_hash_function) of the request and sends the digest value along with the request. If the transmitted digest matches what the Stormpath API server computes for the same request, the request is authenticated.
+Stormpath supports a more secure authentication scheme known as digest authentication. This approach computes a [cryptographic digest](http://en.wikipedia.org/wiki/Cryptographic_hash_function) of the request and sends the digest value along with the request. If the transmitted digest matches what the Stormpath API server computes for the same request, the request is authenticated.
 
 The SAuthc1 sign algorithm is similar in theory to [AWS signing algorithm](http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in which parts of the request (query params, headers, etc) are signed using the API Key and API Secret and that signature is sent in the request as the Authorization header.
 
