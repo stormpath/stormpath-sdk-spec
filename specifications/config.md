@@ -116,7 +116,7 @@ The process of mapping configuration from environment variables should be the fo
 
 ## Post-processing keys
 
-Certain configuration keys cbe used in order to determine specific post-processing behaviour.
+Certain configuration keys can be used in order to determine specific post-processing behaviour.
 
 ### client.apiKey.file
 
