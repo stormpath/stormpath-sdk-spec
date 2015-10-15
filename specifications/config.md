@@ -22,7 +22,7 @@ The order in which the configuration should be loaded.
 6. Environment variables.
 7. Configuration provided through the SDK client constructor. I.e for the Node.js SDK: `new stormpath.Client({/* config here */});`.
 
-*** Ignore file if empty or doesn't exist.*
+***Ignore file if empty or doesn't exist.*
 
 
 ## Default configuration
