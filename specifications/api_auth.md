@@ -13,10 +13,9 @@ provide.  These classes should be initialized with a Stormpath Application and
 accept an HTTP request object of some sort.
 
 
-### BasicRequestAuthenticator
+### ApiKeyAuthenticator
 
-This class should authenticate HTTP Basic Auth requests.
-
+This class should authenticate HTTP Basic Auth requests.  Meaning that this is usually used when your HTTP Request has the Basic Authorization scheme.  The Basic Authentication Request object MUST take ApiKeyId and ApiKeySecret field.  The Basic Authentication Result MUST return an object with an account and api key.
 
 #### Methods
 
@@ -26,54 +25,16 @@ This section lists the methods that this class should have.
 | ---- | ----------- | ----- | ------ | 
 | Authenticate | A method used to authenticate an HTTP Request object | Basic Authentication Request| Basic Authentication Result | 
 
+### UsernamePasswordAuthenticator
 
-### OAuthRequestAuthenticator
-
-This class should authenticate OAuth2 requests.  It will *eventually* support
-authenticating all 4 OAuth2 grant types.
-
-Specifically, right now, this class will authenticate OAuth2 access tokens, as
-well as handle API key for access token exchanges using the OAuth2 client
-credentials grant type.
-
-**NOTE**: In the future we might need to accept options regarding which grant
-types this authenticator should support.
-
+This class should authenticate HTTP Basic Auth requests.  Meaning that this is usually used when your HTTP Request has the Basic Authorization scheme.  The Basic Authentication Request object should take username and password field.
 
 #### Methods
 
 This section lists the methods that this class should have.
 
-| Name | Description | Input | Output |
-| ---- | ----------- | ----- | ------ |
-| Authenticate | A method used to authenticate an HTTP Request object | OAuth Authentication Request | OAuth Authentication Result |
+| Name | Description | Input | Output | 
+| ---- | ----------- | ----- | ------ | 
+| Authenticate | A method used to authenticate an HTTP Request object | Basic Authentication Request| Basic Authentication Result | 
 
-
-### OAuthBearerRequestAuthenticator
-
-This class should authenticate OAuth2 bearer token requests only.  It will only
-look for the bearer token in the HTTP request.
-
-
-#### Methods
-
-This section lists the methods that this class should have.
-
-| Name | Description | Input | Output |
-| ---- | ----------- | ----- | ------ |
-| Authenticate | A method used to authenticate an HTTP Request object | OAuth Bearer Authentication Request| OAuth Bearer Authentication Result |
-
-
-### OAuthClientCredentialsRequestAuthenticator
-
-This class should authenticate OAuth2 client credentials grant type requests
-only.  It will handle authenticating a request based on API key credentials.
-
-
-#### Methods
-
-This section lists the methods that this class should have.
-
-| Name | Description | Input | Output |
-| ---- | ----------- | ----- | ------ |
-| Authenticate | A method used to authenticate an HTTP Request object | OAuth Client Credentials Authentication Request| OAuth Client Credentials Authentication Result |
+### PasswordOAuthAuthenticator
