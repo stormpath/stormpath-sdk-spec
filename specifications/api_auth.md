@@ -93,3 +93,17 @@ This section lists the methods that this class should have.
 | Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
 | ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
 | Authenticate | A method used to authenticate an HTTP Request object | HTTP Request Object| OAuth Client Credentials Authentication Result |  |  |  |  |  |  |
+
+### OAuthPasswordGrantRequestAuthenticator
+
+This class should authenticate OAuth2 passwordgrant type requests
+only.  It will handle authenticating a request based on API key credentials.
+
+
+#### Methods
+
+This section lists the methods that this class should have.
+
+| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
+| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
+| Authenticate | A method used to authenticate an HTTP Request object | HTTP Request Object| OAuth Password Grant Authentication Result |  |  |  |  |  |  |
