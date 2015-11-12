@@ -22,9 +22,9 @@ This class should authenticate HTTP Basic Auth requests.
 
 This section lists the methods that this class should have.
 
-| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
-| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
-| Authenticate | A method used to authenticate an HTTP Request object | Basic Authentication Request| Basic Authentication Result |  |  |  |  |  |  |
+| Name | Description | Input | Output | 
+| ---- | ----------- | ----- | ------ | 
+| Authenticate | A method used to authenticate an HTTP Request object | Basic Authentication Request| Basic Authentication Result | 
 
 
 ### OAuthRequestAuthenticator
@@ -44,9 +44,9 @@ types this authenticator should support.
 
 This section lists the methods that this class should have.
 
-| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
-| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
-| Authenticate | A method used to authenticate an HTTP Request object | OAuth Authentication Request | OAuth Authentication Result |  |  |  |  |  |  |
+| Name | Description | Input | Output |
+| ---- | ----------- | ----- | ------ |
+| Authenticate | A method used to authenticate an HTTP Request object | OAuth Authentication Request | OAuth Authentication Result |
 
 
 ### OAuthBearerRequestAuthenticator
@@ -59,9 +59,9 @@ look for the bearer token in the HTTP request.
 
 This section lists the methods that this class should have.
 
-| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
-| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
-| Authenticate | A method used to authenticate an HTTP Request object | OAuth Bearer Authentication Request| OAuth Bearer Authentication Result |  |  |  |  |  |  |
+| Name | Description | Input | Output |
+| ---- | ----------- | ----- | ------ |
+| Authenticate | A method used to authenticate an HTTP Request object | OAuth Bearer Authentication Request| OAuth Bearer Authentication Result |
 
 
 ### OAuthClientCredentialsRequestAuthenticator
@@ -74,6 +74,6 @@ only.  It will handle authenticating a request based on API key credentials.
 
 This section lists the methods that this class should have.
 
-| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
-| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
-| Authenticate | A method used to authenticate an HTTP Request object | OAuth Client Credentials Authentication Request| OAuth Client Credentials Authentication Result |  |  |  |  |  |  |
+| Name | Description | Input | Output |
+| ---- | ----------- | ----- | ------ |
+| Authenticate | A method used to authenticate an HTTP Request object | OAuth Client Credentials Authentication Request| OAuth Client Credentials Authentication Result |
