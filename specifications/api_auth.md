@@ -13,22 +13,6 @@ provide.  These classes should be initialized with a Stormpath Application and
 accept an HTTP request object of some sort.
 
 
-### ApiRequestAuthenticator
-
-This class should authenticate both HTTP Basic Auth *and* OAuth2 requests.
-However, if you need more specific or customized OAuth2 request processing, you
-will likely want to use the OauthRequestAuthenticator class.
-
-
-#### Methods
-
-This section lists the methods that this class should have.
-
-| Name | Description | Input | Output | REST | Java | Python | Node | PHP | Ruby |
-| ---- | ----------- | ----- | ------ | ---- | ---- | ------ | ---- | --- | ---- |
-| Authenticate | A method used to authenticate an HTTP Request object | HTTP Request Object| API Authentication Result |  |  |  |  |  |  |
-
-
 ### BasicRequestAuthenticator
 
 This class should authenticate HTTP Basic Auth requests.
