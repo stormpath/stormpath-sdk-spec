@@ -200,7 +200,17 @@ serialized, it should return that same format:
 }
 ```
 
-## OauthClientCredentialsAuthenticationResult
+It should provide the following methods:
+
+* `getAccessToken()`, which returns the `access_token` string.
+* `getStormpathAccessToken()`, which fetches the resource at
+  `stormpath_access_token_href`.
+* `getRefreshToken()`, which returns the `refresh_token` string.
+* `getExpiresIn()`, which returns the `expires_in` value.
+* `getTokenType()`, which returns the `token_type` value.
+
+
+## OAuthClientCredentialsAuthenticationResult
 
 This extends the generic AuthenticationResult, with the following methods:
 
@@ -231,13 +241,3 @@ It should provide the following methods:
 * `getState()` - returns the `state` claim of the JWT.
 * `getStatus()` - returns the `status` claim of the JWT.
 * `getIsNewSub()` - returns the `isNewSub` claim of the JWT.
-
-
-It should provide the following methods:
-
-* `getAccessToken()`, which returns the `access_token` string.
-* `getStormpathAccessToken()`, which fetches the resource at
-  `stormpath_access_token_href`.
-* `getRefreshToken()`, which returns the `refresh_token` string.
-* `getExpiresIn()`, which returns the `expires_in` value.
-* `getTokenType()`, which returns the `token_type` value.
