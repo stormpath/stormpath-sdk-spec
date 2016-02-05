@@ -53,7 +53,7 @@ application:
   href: null
 ```
 
-See the [stormpath.yaml](#stormpath-json-yaml) section below for examples of properties not specified in the default configuration.
+>> :bulb: See the [stormpath.yaml](#stormpathjsonyaml) section below for examples of properties not specified in the default configuration.
 
 ## Files
 
@@ -85,10 +85,14 @@ client:
     defaultTtl: 300
     defaultTti: 300
     caches:
+      
+      # Resource cache configurations, as needed.
+      # These are used to override the default TTL/TTI settings
+      # for a particular resource type.
       account:
         ttl: 300
         tti: 300
-      # Additional resource cache configurations, as needed.
+      
   baseUrl: "https://api.stormpath.com/v1"
   connectionTimeout: 30
   authenticationScheme: "SAUTHC1"
