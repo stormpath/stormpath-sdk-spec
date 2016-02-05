@@ -27,7 +27,7 @@ The order in which the configuration should be loaded.
 
 ## Default configuration
 
-The default configuration, represented as [YAML](https://en.wikipedia.org/wiki/YAML):
+The **default** configuration, represented as [YAML](https://en.wikipedia.org/wiki/YAML):
 
 ```yaml
 ---
@@ -52,6 +52,8 @@ application:
   name: null
   href: null
 ```
+
+See the [stormpath.yaml](#stormpath-json-yaml) section below for examples of properties not specified in the default configuration.
 
 ## Files
 
