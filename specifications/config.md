@@ -53,7 +53,7 @@ application:
   href: null
 ```
 
->> :bulb: See the [stormpath.yaml](#stormpathjsonyaml) section below for examples of properties not specified in the default configuration.
+> :bulb: See the [stormpath.yaml](#stormpathjsonyaml) section below for examples of properties not specified in the default configuration.
 
 ## Files
 
@@ -85,7 +85,6 @@ client:
     defaultTtl: 300
     defaultTti: 300
     caches:
-      
       # Resource cache configurations, as needed.
       # These are used to override the default TTL/TTI settings
       # for a particular resource type.
