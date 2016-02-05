@@ -27,7 +27,7 @@ The order in which the configuration should be loaded.
 
 ## Default configuration
 
-The default configuration structure. Represented as [YAML](https://en.wikipedia.org/wiki/YAML) below.
+The default configuration, represented as [YAML](https://en.wikipedia.org/wiki/YAML):
 
 ```yaml
 ---
@@ -39,10 +39,7 @@ client:
   cacheManager:
     defaultTtl: 300
     defaultTti: 300
-    caches:
-      account:
-        ttl: 300
-        tti: 300
+    caches: { }
   baseUrl: "https://api.stormpath.com/v1"
   connectionTimeout: 30
   authenticationScheme: "SAUTHC1"
@@ -89,6 +86,7 @@ client:
       account:
         ttl: 300
         tti: 300
+      # Additional resource cache configurations, as needed.
   baseUrl: "https://api.stormpath.com/v1"
   connectionTimeout: 30
   authenticationScheme: "SAUTHC1"
