@@ -10,7 +10,9 @@ The header format is a series of  whitespace-delimited token groups:
 [integration token(s)?] [SDK token] [runtime token] [OS token] (anything else?)
 ```
 
-The sections below will describe each token group. An complete SDK `User-Agent` string will look like the following:
+The sections below will describe each token group.
+
+A complete SDK `User-Agent` string will look like the following:
 
 ```
 stormpath-sdk-angularjs/0.9.0 angular/1.4.7 express-stormpath/3.0.0 express/4.13.4 stormpath-sdk-node/0.17.5 node/5.7.1 Windows/6.3
