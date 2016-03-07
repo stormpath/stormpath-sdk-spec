@@ -27,6 +27,8 @@ At minimum, the SDK should make a best attempt to send the tokens provided by th
 
 ## Token Groups
 
+The rules for constructing each token group are:
+
 #### Integration Tokens *(if any)*
 
 A string containing tokens provided by the integration layer, as described in Extensibility above.
