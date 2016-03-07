@@ -39,7 +39,7 @@ This should be omitted if null or empty (if there is no integration being used).
 
 #### SDK Token
 
-The Stormpath SDK name and version separated by a slash '/'.
+The Stormpath SDK name and version separated by a slash '/'. For example, `stormpath-sdk-node/0.17.5`.
 
 #### Runtime Token
 
