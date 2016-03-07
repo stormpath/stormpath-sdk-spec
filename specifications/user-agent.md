@@ -37,7 +37,7 @@ This should be omitted if null or empty (if there is no integration being used).
 
 The Stormpath SDK name and version separated by a slash '/'.
 
-### Runtime Token
+#### Runtime Token
 
 The low-level runtime that is hosting the SDK. For example, `python/2.2.3`.
 
