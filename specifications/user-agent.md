@@ -1,10 +1,10 @@
 # User Agent
 
-This document specifies how Stormpath SDKs should handle and report the `User-Agent` header.
+All SDKs must report the information about the current running environment back to Stormpath. This reporting will use the HTTP `User-Agent` header.
 
-## Behavior
+## Format
 
-All SDKs must report the information about the current running environment back to Stormpath. This reporting will use the HTTP `User-Agent` header. The header format is a series of  whitespace-delimited token groups:
+The header format is a series of  whitespace-delimited token groups:
 
 ```
 [integration token(s)?] [SDK token] [runtime token] [OS token] (anything else?)
