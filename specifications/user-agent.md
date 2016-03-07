@@ -7,7 +7,7 @@ This document specifies how Stormpath SDKs should handle and report the `User-Ag
 All SDKs must report the information about the current running environment back to Stormpath. This reporting will use the HTTP `User-Agent` header. The header format is a series of  whitespace-delimited token groups:
 
 ```
-[integration token(s)?] [SDK token] [runtime token] [OS token] [anything else?]
+[integration token(s)?] [SDK token] [runtime token] [OS token] ([anything else?])
 ```
 
 The sections below will describe each token group. An complete SDK `User-Agent` string will look like the following:
@@ -47,6 +47,6 @@ The machine's operating system name and version. For example, `Windows/6.3`.
 
 #### Anything Else *(if any)*
 
-Any additional tokens that are useful or identify some feature of the environment. For example, the .NET SDK makes a best guess at the .NET source language that is interacting with the SDK, and sends a token like `lang/csharp` or `lang/vb`.
+All other system information should be included in parenthesis.
 
 This should be omitted if null or empty.
