@@ -2,6 +2,12 @@
 
 All SDKs must report the information about the current running environment back to Stormpath. This reporting will use the HTTP `User-Agent` header.
 
+## Extensibility
+
+The SDK must provide a mechanism for framework integrations built on top of the SDK to add additional framework and client SDK tokens to a given request. The additional tokens provided by the integration layer should be **prepended** to the base SDK user agent string.
+
+Ideally, the SDK should allow the base Client to be scoped for a set of related requests, so that the additional tokens will be applied to each scoped request, but not necessarily subsequent requests. This requirement is not mandatory; a best-attempt at sending the correct tokens with each request is okay.
+
 ## Format
 
 The header format is a series of  whitespace-delimited token groups:
@@ -16,18 +22,10 @@ A complete SDK `User-Agent` string will look like the following:
 
 ```
 stormpath-sdk-angularjs/0.9.0 angular/1.4.7 express-stormpath/3.0.0 express/4.13.4 stormpath-sdk-node/0.17.5 node/5.7.1 Windows/6.3
-|-------------------------integration tokens-------------------------------------| |--------SDK token------| |-runtime| |-OS token|
+|------------------------ integration tokens ------------------------------------| |------- SDK token -----| | runtime| | OS token|
 ```
 
-## Extensibility
-
-The SDK must provide a mechanism for framework integrations built on top of the SDK to add additional framework and [agent tracking](https://github.com/stormpath/stormpath-framework-spec/blob/master/agent-tracking.md) tokens to a given request. The additional tokens provided by the integration layer should be **prepended** to the base SDK user agent string.
-
-Ideally, the SDK should allow the base Client to be scoped for a set of related requests, so that the additional tokens will be applied to each scoped request, but not necessarily subsequent requests. For now, this requirement is not mandatory.
-
-At minimum, the SDK should make a best attempt to send the tokens provided by the integration layer along with the appropriate request(s).
-
-## Token Groups
+### Token Groups
 
 The rules for constructing each token group are:
 
