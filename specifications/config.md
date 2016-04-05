@@ -138,3 +138,5 @@ If an `apiKey` key is set, then this key should be mapped to the key `client.api
 
 1. Check if the key `application.href` exists.
 2. If the key exists, then validate that the value contains the substring `/applications/`. This is just a simple sanity check to see if the HREF provided is a valid Stormpath application HREF. If the value doesn't contain that string, then throw an error stating `'(the invalid HREF)' is not a valid Stormpath Application HREF.`.
+3. If `application.name` is specified, attempt to find that application by name
+4. If niether name or href is defined AND the tenant has only one application (that is not the Stormpath Administrators application) then use that application
