@@ -2,7 +2,7 @@
 
 This document specifies how Stormpath SDKs should load and handle configuration.
 
-The configuration that Stormpath SDKs use is a subset of the Stormpath [framework integration configuration](https://github.com/stormpath/stormpath-framework-spec/blob/master/web-config.yaml): SDKs only parse the `stormpath.client` node, while framework integrations use this node as well as others. Regardless, the processing rules defined here apply to **both** SDKs and framework integrations.
+The configuration that Stormpath SDKs use is a subset of the Stormpath [framework integration configuration](https://github.com/stormpath/stormpath-framework-spec/blob/master/example-config.yaml): SDKs only parse the `stormpath.client` node, while framework integrations use this node as well as others. Regardless, the processing rules defined here apply to **both** SDKs and framework integrations.
 
 ## Processing
 
