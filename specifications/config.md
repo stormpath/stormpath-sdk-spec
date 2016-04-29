@@ -1,6 +1,8 @@
 # Configuration
 
-This document specifies how Stormpath SDKs should handle configuration.
+This document specifies how Stormpath SDKs should load and handle configuration.
+
+The configuration that Stormpath SDKs use is a subset of the Stormpath [framework integration configuration](https://github.com/stormpath/stormpath-framework-spec/blob/master/example-config.yaml): SDKs only parse the `stormpath.client` node, while framework integrations use this node as well as others. Regardless, the processing rules defined here apply to **both** SDKs and framework integrations.
 
 ## Processing
 
@@ -31,26 +33,24 @@ The **default** configuration, represented as [YAML](https://en.wikipedia.org/wi
 
 ```yaml
 ---
-client:
-  apiKey:
-    file: null
-    id: null
-    secret: null
-  cacheManager:
-    defaultTtl: 300
-    defaultTti: 300
-    caches: { }
-  baseUrl: "https://api.stormpath.com/v1"
-  connectionTimeout: 30
-  authenticationScheme: "SAUTHC1"
-  proxy:
-    port: null
-    host: null
-    username: null
-    password: null
-application:
-  name: null
-  href: null
+stormpath:
+  client:
+    apiKey:
+      file: null
+      id: null
+      secret: null
+    cacheManager:
+      defaultTtl: 300
+      defaultTti: 300
+      caches: { }
+    baseUrl: "https://api.stormpath.com/v1"
+    connectionTimeout: 30
+    authenticationScheme: "SAUTHC1"
+    proxy:
+      port: null
+      host: null
+      username: null
+      password: null
 ```
 
 > :bulb: See the [stormpath.yaml](#stormpathjsonyaml) section below for examples of properties not specified in the default configuration.
@@ -76,33 +76,30 @@ The file can be present in both the `~/.stormpath` directory and the application
 
 ```yaml
 ---
-client:
-  apiKey:
-    file: null
-    id: null
-    secret: null
-  cacheManager:
-    defaultTtl: 300
-    defaultTti: 300
-    caches:
-      # Resource cache configurations, as needed.
-      # These are used to override the default TTL/TTI settings
-      # for a particular resource type.
-      account:
-        ttl: 300
-        tti: 300
-      
-  baseUrl: "https://api.stormpath.com/v1"
-  connectionTimeout: 30
-  authenticationScheme: "SAUTHC1"
-  proxy:
-    port: null
-    host: null
-    username: null
-    password: null
-application:
-  name: null
-  href: null
+stormpath:
+  client:
+    apiKey:
+      file: null
+      id: null
+      secret: null
+    cacheManager:
+      defaultTtl: 300
+      defaultTti: 300
+      caches:
+        # Resource cache configurations, as needed.
+        # These are used to override the default TTL/TTI settings
+        # for a particular resource type.
+        account:
+          ttl: 300
+          tti: 300
+    baseUrl: "https://api.stormpath.com/v1"
+    connectionTimeout: 30
+    authenticationScheme: "SAUTHC1"
+    proxy:
+      port: null
+      host: null
+      username: null
+      password: null
 ```
 
 ## Environment variables
