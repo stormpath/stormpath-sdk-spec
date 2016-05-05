@@ -40,6 +40,7 @@ stormpath:
       id: null
       secret: null
     cacheManager:
+      enabled: true
       defaultTtl: 300
       defaultTti: 300
       caches: { }
