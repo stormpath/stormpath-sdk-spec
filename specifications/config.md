@@ -41,11 +41,11 @@ stormpath:
       secret: null
     cacheManager:
       enabled: true
-      defaultTtl: 300
+      defaultTtl: 300 # seconds
       defaultTti: 300
       caches: { }
     baseUrl: "https://api.stormpath.com/v1"
-    connectionTimeout: 30
+    connectionTimeout: 30 # seconds
     authenticationScheme: "SAUTHC1"
     proxy:
       port: null
