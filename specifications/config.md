@@ -11,6 +11,7 @@ The order in which the configuration should be processed.
 1. Load configuration according to *loading order*.
 2. Check and apply any *post-processing keys*.
 3. Validate the configuration according to the *validation rules*.
+4. Apply the configuration to the SDK client.
 
 ## Loading order
 
@@ -135,3 +136,11 @@ If an `apiKey` key is set, then this key should be mapped to the key `client.api
 
 1. Check if the key `client.apiKey` exists. If the key is missing then throw an error stating `API key cannot be empty`.
 2. Check if either key `client.apiKey.id` or `client.apiKey.secret` are missing. If either one of them are, then throw an error stating `API key ID and secret is required`.
+
+## Applying Configuration
+
+After the loaded configuration has been processed and validated, it should be applied to the SDK Client object as appropriate. For example (assuming any of these are set via this configuration):
+
+* Connection and cache timeouts should be translated from seconds to the unit of time the SDK is expecting.
+* Resource-specific cache definitions should be built and added to the SDK's cache manager instance.
+* The authentication scheme (Basic or SAuthc1) should be applied.
